@@ -82,11 +82,6 @@ SELECT * FROM productos;
 SELECT * FROM productos WHERE categoria = 'aseo' AND precio < '12.000';
 
 
-SELECT c.nombre, SUM(precio * cantidad) AS total_gastado
-FROM clientes 
-INNER JOIN pedidos pe ON c.id = pe.clientes_id
-INNER JOIN productos pr ON pe.productos_id = pr.id
-GROUP BY c.nombre;
 
 
 -- adicional a eso me encuentro manejando pedidos que realizan los clientes desde whatsapp y me gustaria que existiera la forma de hacer eso en una base de datos, donde puede relacionar esos pedidos con mis clientes.
